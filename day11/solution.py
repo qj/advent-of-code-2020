@@ -44,8 +44,6 @@ class Solution:
                 if self.input[row + step_factor * r][col + step_factor * c] == 'L':
                     break
                 step_factor += 1
-        if row == 0:
-            pass
         return count  
 
     def solve_part_1(self):
