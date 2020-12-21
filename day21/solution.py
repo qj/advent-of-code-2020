@@ -38,12 +38,7 @@ class Solution:
         return len(list(filter(lambda x: x not in self.identified.values(), self.ingredients)))
 
     def solve_part_2(self):
-        res = ""
-        for a in sorted(self.identified):
-            res += f"{self.identified[a]},"
-        return res[:-1]
-
-
+        return ",".join(self.identified[k] for k in sorted(self.identified))
 
 if __name__ == '__main__':
     s = Solution()
